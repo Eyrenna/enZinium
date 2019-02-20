@@ -1,6 +1,8 @@
 package tokenContactTest;
 
 import org.junit.Test;
+import address.Address;
+import tokenContract.TokenContract;
 
 public class TokenContractTest {
 

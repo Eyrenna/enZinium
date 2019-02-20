@@ -42,11 +42,11 @@ public class TokenContract {
 
     //Métodos
 
-    /*@Override
+    @Override
     public String toString() {
-        return "\n" + "name = " + TokenContract.getName() + "\n" +
+        return "\n" + "name = " + getName() + "\n" +
                 "symbol = " + getSymbol() + "\n" +
-                "totalSupply = " + getTotalSupply() + "\n" +
-                "owner PK = " + getAddOwner() + "\n";
-    }*/
+                "totalSupply = " + getTotalSupply() + "\n"/* +
+                "owner PK = " + getAddOwner() + "\n"*/;
+    }
 }
