@@ -17,6 +17,7 @@ package enzinium;
  */
 
 import address.Address;
+import tokenContract.TokenContract;
 
 public class App {
 
@@ -87,14 +88,14 @@ public class App {
          * @return el total de unidades de este token que actualmente existen.
          */
 
-        //_TokenContract ricknillos = new TokenContract(rick);
-        //_ricknillos.setName("Ricknillos");
-        //_ricknillos.setSymbol("RNiLL");
-        //_ricknillos.setTotalSupply(100);
+        TokenContract ricknillos = new TokenContract(rick);
+        ricknillos.setName("Ricknillos");
+        ricknillos.setSymbol("RNiLL");
+        ricknillos.setTotalSupply(100d);
 
-        //_System.out.println("\n" + "Contrato de los Ricknillos" + "\n" +
-         //_       "=========================="        );
-        //_System.out.println(ricknillos.toString());
+        System.out.println("\n" + "Contrato de los Ricknillos" + "\n" +
+                "=========================="        );
+        System.out.println(ricknillos.toString());
 
         /**
          * El contrato TokenContract contiene una tabla de balances

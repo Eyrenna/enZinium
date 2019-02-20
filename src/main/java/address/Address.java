@@ -1,6 +1,7 @@
 package address;
 
 import enzinium.GenSig;
+import tokenContract.TokenContract;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -9,11 +10,13 @@ public class Address {
     //Atributos
     private PublicKey PK = null;
     private PrivateKey SK = null;
+    private double balance = 0d;
 
 
     //Constructor
     public Address() {
     }
+
     //Setters
     public void setPK(PublicKey pk) {
         this.PK = pk;
@@ -22,6 +25,7 @@ public class Address {
     public void setSK(PrivateKey sk) {
         this.SK= sk;
     }
+
 
     //Getters
     public PublicKey getPK() {
@@ -37,4 +41,17 @@ public class Address {
         setPK(GenSig.generateKeyPair(getPK()).getPublic());
         setSK(GenSig.generateKeyPair(getPK()).getPrivate());
     }
+
+    public double getBalance() {
+        return this.balance;
+    }
+
+    @Override
+    public String toString() {
+        return "\n" + "Pk = " + getPK() + "\n" +
+                "balance = " + getBalance() + " EZI" + "\n";
+    }
+
+
+
 }

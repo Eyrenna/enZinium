@@ -1,5 +1,7 @@
 package tokenContactTest;
 
+import org.junit.Test;
+
 public class TokenContractTest {
 
     /*@Test
