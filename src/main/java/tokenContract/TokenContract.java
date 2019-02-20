@@ -1,6 +1,7 @@
 package tokenContract;
 
 import address.Address;
+import jdk.nashorn.internal.parser.Token;
 
 import java.security.PublicKey;
 import java.util.HashMap;
@@ -62,5 +63,9 @@ public class TokenContract {
 
     public void addOwner(PublicKey pk, double tokens) {
         balances.putIfAbsent(address.getPK(), tokens);
+    }
+
+    public int numOwners() {
+        return getBalances().size();
     }
 }

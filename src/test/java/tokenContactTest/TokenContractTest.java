@@ -38,8 +38,17 @@ public class TokenContractTest {
         rick.generateKeyPair();
         TokenContract ricknillos = new TokenContract(rick);
         ricknillos.addOwner(rick.getPK(), 100d);
-        HashMap<Object, Object> balances = new HashMap<>();
-        
-        assertEquals(1, balances.size());
+
+        assertEquals(1, ricknillos.getBalances().size());
+    }
+
+    @Test
+    public void numOwnersTest() {
+        Address rick = new Address();
+        rick.generateKeyPair();
+        TokenContract ricknillos = new TokenContract(rick);
+        ricknillos.addOwner(rick.getPK(), 100d);
+
+        assertEquals(1, ricknillos.numOwners());
     }
 }
