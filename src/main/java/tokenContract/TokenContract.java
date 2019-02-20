@@ -2,12 +2,17 @@ package tokenContract;
 
 import address.Address;
 
+import java.security.PublicKey;
+import java.util.HashMap;
+
+
 public class TokenContract {
     //Atributos
     private Address address = null;
     private String name = "";
     private String symbol = "";
     private double totalSupply = 0;
+    /*private <> balances = new HashMap<>();*/
 
     //Constructor
     public TokenContract(Address address) {
@@ -46,7 +51,7 @@ public class TokenContract {
     public String toString() {
         return "\n" + "name = " + getName() + "\n" +
                 "symbol = " + getSymbol() + "\n" +
-                "totalSupply = " + getTotalSupply() + "\n"/* +
-                "owner PK = " + getAddOwner() + "\n"*/;
+                "totalSupply = " + getTotalSupply() + "\n" +
+                "owner PK = " + address.getPK().hashCode() + "\n";
     }
 }
