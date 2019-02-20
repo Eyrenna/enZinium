@@ -2,7 +2,7 @@ package tokenContactTest;
 
 public class TokenContractTest {
 
-    @Test
+    /*@Test
     public void payable_test() {
 
         Address rick = new Address();
@@ -20,5 +20,5 @@ public class TokenContractTest {
 
         // verifico la trasnferencia de EZI
         assertEquals(20d, ricknillos.owner().getBalance(), 0d);
-    }
+    }*/
 }

@@ -14,8 +14,9 @@ public class GenSig {
      * y clave privada SK
      * La clave pública PK es la dirección pública de la Wallet
      * La clave privada SK es necesaria para firmar los mensajes
+     * @param pk
      */
-    public static KeyPair generateKeyPair() {
+    public static KeyPair generateKeyPair(PublicKey pk) {
 
         try {
 
