@@ -4,6 +4,7 @@ import address.Address;
 
 import java.security.PublicKey;
 import java.util.HashMap;
+import java.util.Map;
 
 
 public class TokenContract {
@@ -12,7 +13,7 @@ public class TokenContract {
     private String name = "";
     private String symbol = "";
     private double totalSupply = 0;
-    /*private <> balances = new HashMap<>();*/
+    private Map<PublicKey, Double> balances = new HashMap<>();
 
     //Constructor
     public TokenContract(Address address) {
@@ -41,8 +42,12 @@ public class TokenContract {
         return this.symbol;
     }
 
-    public double getTotalSupply() {
+    public double totalSupply() {
         return this.totalSupply;
+    }
+
+    public Map<PublicKey, Double> getBalances() {
+        return this.balances;
     }
 
     //Métodos
@@ -51,7 +56,11 @@ public class TokenContract {
     public String toString() {
         return "\n" + "name = " + getName() + "\n" +
                 "symbol = " + getSymbol() + "\n" +
-                "totalSupply = " + getTotalSupply() + "\n" +
+                "totalSupply = " + totalSupply() + "\n" +
                 "owner PK = " + address.getPK().hashCode() + "\n";
+    }
+
+    public void addOwner(PublicKey pk, double tokens) {
+        balances.putIfAbsent(address.getPK(), tokens);
     }
 }

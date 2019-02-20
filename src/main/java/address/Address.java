@@ -36,14 +36,14 @@ public class Address {
         return SK;
     }
 
+    public double getBalance() {
+        return this.balance;
+    }
+
     //Métodos
     public void generateKeyPair() {
         setPK(GenSig.generateKeyPair(getPK()).getPublic());
         setSK(GenSig.generateKeyPair(getPK()).getPrivate());
-    }
-
-    public double getBalance() {
-        return this.balance;
     }
 
     @Override

@@ -19,6 +19,9 @@ package enzinium;
 import address.Address;
 import tokenContract.TokenContract;
 
+import java.security.PublicKey;
+import java.util.Map;
+
 public class App {
 
     public static void main( String[] args )
@@ -118,9 +121,9 @@ public class App {
          * @param cantidad de tokens que posee
          */
 
-        //_ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
+        ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
         // verifica que Rick no se actualiza una vez que ya existe en el balance
-        //_ricknillos.addOwner(rick.getPK(), 500d);
+        ricknillos.addOwner(rick.getPK(), 500d);
 
         /**
          * Consulta los balances
